@@ -1,14 +1,13 @@
 .App {
   display: flex;
   justify-content: center;
-  margin-top: 25%;
-  width: 100vw;
+  height: 80vh;
 }
 
 .calculator {
   display: flex;
   flex-direction: column;
-  max-width: 25%;
+  justify-content: center;
 }
 
 ::placeholder {
@@ -33,7 +32,7 @@
 }
 
 .operator {
-  background-color: rgba(255, 166, 0, 0.812);
+  background-color: #f5913e;
   border: 1px solid rgb(217, 217, 217);
 }
 

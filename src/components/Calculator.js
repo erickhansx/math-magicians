@@ -68,7 +68,7 @@ class Calculator extends React.Component {
           <button type="button" className="btn">
             .
           </button>
-          <button type="button" className="btn">
+          <button type="button" className="btn operator">
             =
           </button>
         </div>
