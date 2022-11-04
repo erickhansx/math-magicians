@@ -1,0 +1,41 @@
+.App {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+.input-area {
+  input {
+    width: 98%;
+    height: 90%;
+    margin-bottom: 25px;
+    direction: rtl;
+    background-color: grey;
+  }
+}
+
+.btn {
+  width: 25%;
+  height: 45%;
+  border: 1px solid rgb(217, 217, 217);
+}
+
+.operator {
+  background-color: #f5913e;
+  border: 1px solid rgb(217, 217, 217);
+}
+
+.long {
+  width: 50%;
+}
