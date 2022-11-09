@@ -1,3 +1,5 @@
+import './Quote.css';
+
 function Quote() {
   return (
     <div className="quote">

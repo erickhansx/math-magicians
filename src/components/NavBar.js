@@ -6,7 +6,10 @@ import './NavBar.scss';
 function NavBar() {
   const StyledLink = styled(Link)`
     text-decoration: none;
-    background-color: red;
+    font-size: 20px;
+    background-color: rgb(76, 76, 76);
+    padding: 10px;
+    border-radius: 5px;
   `;
 
   return (
@@ -16,8 +19,8 @@ function NavBar() {
       </div>
       <div className="navbar__menu">
         <StyledLink to="Home">Home</StyledLink>
-        <Link to="Calculator">Calculator</Link>
-        <Link to="Quote">Quote</Link>
+        <StyledLink to="Calculator">Calculator</StyledLink>
+        <StyledLink to="Quote">Quote</StyledLink>
       </div>
     </div>
   );

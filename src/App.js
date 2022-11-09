@@ -12,11 +12,11 @@ class App extends React.Component {
   }
 
   render() {
+    const mainStyle = { color: 'grey', fontSize: '20px', margin: '20px' };
     return (
-      <Router>
-        <NavBar />
-
-        <div className="App">
+      <div className="App" style={mainStyle}>
+        <Router>
+          <NavBar />
           <div className="main-holder">
             <Routes>
               <Route path="Calculator" element={<Calculator />} />
@@ -28,8 +28,8 @@ class App extends React.Component {
               <Route path="Quote" element={<Quote />} />
             </Routes>
           </div>
-        </div>
-      </Router>
+        </Router>
+      </div>
     );
   }
 }
