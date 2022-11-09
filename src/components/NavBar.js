@@ -1,17 +1,23 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import './NavBar.scss';
 
 function NavBar() {
+  const StyledLink = styled(Link)`
+    text-decoration: none;
+    background-color: red;
+  `;
+
   return (
     <div className="navbar">
       <div className="navbar__headers">
         <h1>Math Magicians</h1>
       </div>
       <div className="navbar__menu">
-        <NavLink>Home</NavLink>
-        <Link to="/Calculator">Calculator</Link>
-        <NavLink>Quote</NavLink>
+        <StyledLink to="Home">Home</StyledLink>
+        <Link to="Calculator">Calculator</Link>
+        <Link to="Quote">Quote</Link>
       </div>
     </div>
   );
