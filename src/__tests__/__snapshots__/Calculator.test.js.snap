@@ -19,6 +19,7 @@ exports[`Quote Renders 1`] = `
     >
       <p
         className="input-calc"
+        data-testid="testp"
       >
         0
       </p>
