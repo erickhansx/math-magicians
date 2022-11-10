@@ -26,4 +26,42 @@ describe('Testing operators', () => {
     expect(el).toEqual('4');
     expect(el).not.toBe(null);
   });
+
+  test('See if passing the division operator works properly', async () => {
+    render(<Calculator />);
+    await userEvent.click(screen.getByRole('button', { name: /9/ }));
+    await userEvent.click(screen.getByRole('button', { name: /0/ }));
+    await userEvent.click(screen.getByRole('button', { name: '÷' }));
+    await userEvent.click(screen.getByRole('button', { name: /5/ }));
+    await userEvent.click(screen.getByRole('button', { name: /=/ }));
+
+    const el = screen.getByTestId('testp').innerHTML;
+    expect(el).toEqual('18');
+    expect(el).not.toBe(null);
+  });
+
+  test('See if passing the modulo operator works properly', async () => {
+    render(<Calculator />);
+    await userEvent.click(screen.getByRole('button', { name: /2/ }));
+    await userEvent.click(screen.getByRole('button', { name: /5/ }));
+    await userEvent.click(screen.getByRole('button', { name: '%' }));
+    await userEvent.click(screen.getByRole('button', { name: /2/ }));
+    await userEvent.click(screen.getByRole('button', { name: /=/ }));
+
+    const el = screen.getByTestId('testp').innerHTML;
+    expect(el).toEqual('1');
+    expect(el).not.toBe(null);
+  });
+
+  test('See if passing the substracting operator works properly', async () => {
+    render(<Calculator />);
+    await userEvent.click(screen.getByRole('button', { name: /9/ }));
+    await userEvent.click(screen.getByRole('button', { name: '+' }));
+    await userEvent.click(screen.getByRole('button', { name: /5/ }));
+    await userEvent.click(screen.getByRole('button', { name: /=/ }));
+
+    const el = screen.getByTestId('testp').innerHTML;
+    expect(el).toEqual('14');
+    expect(el).not.toBe(null);
+  });
 });
