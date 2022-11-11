@@ -22,7 +22,7 @@ const Calculator = () => {
       </div>
       <div className="calculator__body">
         <div className="input-area">
-          <p className="input-calc">
+          <p className="input-calc" data-testid="testp">
             {total}
             {operation}
             {next}
